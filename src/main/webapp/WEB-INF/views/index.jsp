@@ -11,11 +11,17 @@
     </head>
     <body>
         <form method="post" action="">
-            <input type="number" name="kpl">
-            <input type="number" name="userId">
+            <table>
+                <tr><td>Määrä:</td><td><input type="number" name="kpl"></td></tr>
+                <tr><td>PlayerId:</td><td><input type="number" name="userId"></td></tr>
+            </table>
             <input type="submit">
         </form>
-        ${kulttuurit}
+        <ol>
+            <c:forEach var="kulttuuri" items="${kulttuurit}">    
+                <li><a href="http://s4-fi.ikariam.gameforge.com/?view=sendIKMessage&msgType=77&receiverId=${kulttuuri.userId}">${kulttuuri.kpl} kpl:tta</a> </li>
+                </c:forEach>
+        </ol>
         <footer>
             Copyright © Aikain - gosu.fi 
         </footer>
