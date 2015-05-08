@@ -25,7 +25,7 @@ public class DefaultController {
         Collections.sort(kulttuurit, new Comparator<Kulttuuri>() {
             @Override
             public int compare(Kulttuuri o1, Kulttuuri o2) {
-                return o1.getTime().compareTo(o2.getTime());
+                return o1.getTime().compareTo(o2.getTime()) * -1;
             }
         });
         model.addAttribute("kulttuurit", kulttuuriRepository.findAll());
@@ -38,9 +38,9 @@ public class DefaultController {
         return "redirect:";
     }
     
-    @RequestMapping(value = "{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "kulttuuri/{id}", method = RequestMethod.DELETE)
     public String delete(@PathVariable String id) {
         kulttuuriRepository.delete(id);
-        return "redirect:";
+        return "redirect:index";
     }
 }
