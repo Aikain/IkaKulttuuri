@@ -5,8 +5,10 @@ import javax.persistence.Entity;
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
 @Entity
-public class Kulttuuri extends AbstractPersistable<Long> {
+public class Kulttuuri{
 
+    @Id
+    private Long id;
     private Date time;
     private int kpl;
     private Long userId;
@@ -46,6 +48,14 @@ public class Kulttuuri extends AbstractPersistable<Long> {
 
     public void setUser(String user) {
         this.user = user;
+    }
+
+    public Long getId() {
+        return this.id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
 }

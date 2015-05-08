@@ -37,10 +37,10 @@ public class DefaultController {
         kulttuuriRepository.save(kulttuuri);
         return "redirect:";
     }
-    
+
     @RequestMapping(value = "kulttuuri/{id}", method = RequestMethod.DELETE)
-    public String delete(@PathVariable String id) {
-        kulttuuriRepository.delete(id);
+    public String delete(@PathVariable Long id) {
+        kulttuuriRepository.delete(kulttuuriRepository.findOne(id));
         return "redirect:index";
     }
 }

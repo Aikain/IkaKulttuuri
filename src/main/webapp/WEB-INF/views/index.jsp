@@ -26,7 +26,7 @@
                     <td>${kulttuuri.kpl}</td>
                     <td>${kulttuuri.time}</td>
                     <td><a target="_blank" href="http://s4-fi.ikariam.gameforge.com/?view=sendIKMessage&msgType=77&receiverId=${kulttuuri.userId}"><img src="http://s4-fi.ikariam.gameforge.com/skin/interface/icon_message_write.png" /></a></td>
-                    <td><form method="DELETE" action="kulttuuri/${kulttuuri.id}"><input type="image" src="http://s4-fi.ikariam.gameforge.com/skin/interface/cross.png"></form></td>
+                    <td><button onclick="$.ajax({url: 'kulttuuri/${kulttuuri.id}', type: 'DELETE'});"><img src="http://s4-fi.ikariam.gameforge.com/skin/interface/cross.png"></td>
                 </tr>
             </c:forEach>
         </table>
