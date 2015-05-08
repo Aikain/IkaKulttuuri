@@ -12,16 +12,23 @@
     <body>
         <form method="post" action="">
             <table>
-                <tr><td>Määrä:</td><td><input type="number" name="kpl"></td></tr>
-                <tr><td>PlayerId:</td><td><input type="number" name="userId"></td></tr>
+                <tr><td>Nimi:</td><td><input type="text" name="user" required></td></tr>
+                <tr><td>Määrä:</td><td><input type="number" name="kpl" required></td></tr>
+                <tr><td>PlayerId:</td><td><input type="number" name="userId" required></td></tr>
             </table>
             <input type="submit">
         </form>
-        <ol>
-            <c:forEach var="kulttuuri" items="${kulttuurit}">    
-                <li><a href="http://s4-fi.ikariam.gameforge.com/?view=sendIKMessage&msgType=77&receiverId=${kulttuuri.userId}">${kulttuuri.kpl} kpl:tta</a> </li>
-                </c:forEach>
-        </ol>
+        <table>
+            <tr><td><b>Nimi:</b></td><td><b>Määrä:</b></td><td><b>Aika:</b></td></tr>
+            <c:forEach var="kulttuuri" items="${kulttuurit}">
+                <tr>
+                    <td>${kulttuuri.user}</td>
+                    <td>${kulttuuri.kpl}</td>
+                    <td>$kulttuuri.aika</td>
+                    <td><a target="_blank" href="http://s4-fi.ikariam.gameforge.com/?view=sendIKMessage&msgType=77&receiverId=${kulttuuri.userId}"><img src="http://s4-fi.ikariam.gameforge.com/skin/interface/icon_message_write.png" /></a></td>
+                </tr>
+            </c:forEach>
+        </table>
         <footer>
             Copyright © Aikain - gosu.fi 
         </footer>

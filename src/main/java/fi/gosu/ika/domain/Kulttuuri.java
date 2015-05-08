@@ -10,6 +10,7 @@ public class Kulttuuri extends AbstractPersistable<Long> {
     private Date time;
     private int kpl;
     private Long userId;
+    private String user;
 
     public Kulttuuri() {
         this.time = new Date(System.currentTimeMillis());
@@ -37,6 +38,14 @@ public class Kulttuuri extends AbstractPersistable<Long> {
 
     public void setUserId(Long userId) {
         this.userId = userId;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
     }
 
 }
