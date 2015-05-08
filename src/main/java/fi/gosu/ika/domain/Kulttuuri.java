@@ -2,13 +2,11 @@ package fi.gosu.ika.domain;
 
 import java.util.Date;
 import javax.persistence.Entity;
-import javax.persistence.Id;
+import org.springframework.data.jpa.domain.AbstractPersistable;
 
 @Entity
-public class Kulttuuri{
+public class Kulttuuri extends AbstractPersistable<Long> {
 
-    @Id
-    private Long id;
     private Date time;
     private int kpl;
     private Long userId;
@@ -48,14 +46,6 @@ public class Kulttuuri{
 
     public void setUser(String user) {
         this.user = user;
-    }
-
-    public Long getId() {
-        return this.id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
 }
