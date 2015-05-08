@@ -24,7 +24,7 @@
                 <tr>
                     <td>${kulttuuri.user}</td>
                     <td>${kulttuuri.kpl}</td>
-                    <td>$kulttuuri.aika</td>
+                    <td>${kulttuuri.aika}</td>
                     <td><a target="_blank" href="http://s4-fi.ikariam.gameforge.com/?view=sendIKMessage&msgType=77&receiverId=${kulttuuri.userId}"><img src="http://s4-fi.ikariam.gameforge.com/skin/interface/icon_message_write.png" /></a></td>
                 </tr>
             </c:forEach>
