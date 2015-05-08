@@ -2,7 +2,7 @@ package fi.gosu.ika.domain;
 
 import java.util.Date;
 import javax.persistence.Entity;
-import org.springframework.data.jpa.domain.AbstractPersistable;
+import javax.persistence.Id;
 
 @Entity
 public class Kulttuuri{
