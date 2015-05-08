@@ -21,12 +21,12 @@
         <table>
             <tr><td><b>Nimi:</b></td><td><b>Määrä:</b></td><td><b>Aika:</b></td></tr>
             <c:forEach var="kulttuuri" items="${kulttuurit}">
-                <tr>
+                <tr id="kulttuuri${kulttuuri.id}">
                     <td>${kulttuuri.user}</td>
                     <td>${kulttuuri.kpl}</td>
                     <td>${kulttuuri.time}</td>
                     <td><a target="_blank" href="http://s4-fi.ikariam.gameforge.com/?view=sendIKMessage&msgType=77&receiverId=${kulttuuri.userId}"><img src="http://s4-fi.ikariam.gameforge.com/skin/interface/icon_message_write.png" /></a></td>
-                    <td><button onclick="$.ajax({url: 'kulttuuri/${kulttuuri.id}', type: 'DELETE'});"><img src="http://s4-fi.ikariam.gameforge.com/skin/interface/cross.png"></td>
+                    <td><button onclick="poista(${kulttuuri.id})"><img src="http://s4-fi.ikariam.gameforge.com/skin/interface/cross.png" /></button></td>
                 </tr>
             </c:forEach>
         </table>
