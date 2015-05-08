@@ -8,6 +8,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -34,6 +35,12 @@ public class DefaultController {
     @RequestMapping(method = RequestMethod.POST)
     public String createKulttuuri(Kulttuuri kulttuuri) {
         kulttuuriRepository.save(kulttuuri);
-        return "redirect:index";
+        return "redirect:";
+    }
+    
+    @RequestMapping(value = "{id}", method = RequestMethod.DELETE)
+    public String delete(@PathVariable String id) {
+        kulttuuriRepository.delete(id);
+        return "redirect:";
     }
 }
