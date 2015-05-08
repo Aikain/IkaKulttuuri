@@ -26,10 +26,12 @@
                     <td>${kulttuuri.kpl}</td>
                     <td>${kulttuuri.time}</td>
                     <td><a target="_blank" href="http://s4-fi.ikariam.gameforge.com/?view=sendIKMessage&msgType=77&receiverId=${kulttuuri.userId}"><img src="http://s4-fi.ikariam.gameforge.com/skin/interface/icon_message_write.png" /></a></td>
-                    <td><button onclick="poista(${kulttuuri.id})"><img src="http://s4-fi.ikariam.gameforge.com/skin/interface/cross.png" /></button></td>
+                    <td><a href="" onclick="poista(${kulttuuri.id}); return false"><img src="http://s4-fi.ikariam.gameforge.com/skin/interface/cross.png" /></a></td>
                 </tr>
             </c:forEach>
         </table>
+        <br>
+<!--        <h4>Poistaminen ei toimi toistaiseksi, valitettavasti menee ensi viikon tiistaille asti ennen kuin pystytään korjaamaan.</h4>-->
         <footer>
             Copyright © Aikain - gosu.fi 
         </footer>
