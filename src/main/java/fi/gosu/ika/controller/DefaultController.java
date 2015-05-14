@@ -9,10 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/*")
@@ -46,10 +48,12 @@ public class DefaultController {
         return new ResponseEntity(HttpStatus.OK);
     }
 
+    @Transactional
     @RequestMapping(value = "kulttuuri/{id}", method = RequestMethod.POST)
-    public ResponseEntity delete(@PathVariable Long id) {
-        kulttuuriRepository.delete(kulttuuriRepository.findOne(id));
-        return new ResponseEntity(HttpStatus.OK);
+    public ResponseEntity change(@PathVariable Long id, @RequestParam int count) {
+        Kulttuuri kulttuuri = kulttuuriRepository.findOne(id);
+        kulttuuri.setKpl(count);
+        return new ResponseEntity(kulttuuri, HttpStatus.OK);
     }
 
 }
