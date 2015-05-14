@@ -45,4 +45,11 @@ public class DefaultController {
         kulttuuriRepository.delete(kulttuuriRepository.findOne(id));
         return new ResponseEntity(HttpStatus.OK);
     }
+
+    @RequestMapping(value = "kulttuuri/{id}", method = RequestMethod.POST)
+    public ResponseEntity delete(@PathVariable Long id) {
+        kulttuuriRepository.delete(kulttuuriRepository.findOne(id));
+        return new ResponseEntity(HttpStatus.OK);
+    }
+
 }
