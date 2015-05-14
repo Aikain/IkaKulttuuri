@@ -14,7 +14,7 @@
     </head>
     <body>
         <div id="dialog" title="Vaihda kulttuurien määrä">
-            <p class="validateTips">Testauksessa toistaiseksi...</p>
+            <p class="validateTips">Anna uusi määrä:</p>
             <form>
                 <label for="count">Määrä:</label>
                 <input type="number" name="count" id="count" value="0" class="text ui-widget-content ui-corner-all">
@@ -54,10 +54,14 @@
         </form>
         <h2>Uutta:</h2>
         <ul>
-          <li>Sivujen ulkoasua muokataan "paremmaksi"</li>
-          <li>Klikkaamalla 'nimi'-, 'päivä'- tai 'aika'-tekstiä taulukkoa järjestyy niiden mukaan.</li>
-          <li>Uudelleen klikkaus vaihtaa suunnan</li>  
+          <li>Sivujen ulkoasua muokataan "paremmaksi".</li>
+          <li>Klikkaamalla nimen vieressä olevaa kulttuurien määrää, voit vaihtaa sitä.</li>
         </ul>
+        <h2>Hiukan vanhempia ominaisuuksia:</h2>
+        <ul>
+          <li>Klikkaamalla taulukon otsikoita, pystyt järjestämään kyseisen sarakkeen mukaan.</li>
+          <li>Uudelleen klikkaus vaihtaa suunnan (asc -> desc, desc -> asc).</li>  
+        </ul>        
         </div>
         <footer>
             Copyright © Aikain - gosu.fi 

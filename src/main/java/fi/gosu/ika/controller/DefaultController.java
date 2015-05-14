@@ -4,6 +4,7 @@ import fi.gosu.ika.domain.Kulttuuri;
 import fi.gosu.ika.repository.KulttuuriRepository;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -53,6 +54,7 @@ public class DefaultController {
     public ResponseEntity change(@PathVariable Long id, @RequestParam int count) {
         Kulttuuri kulttuuri = kulttuuriRepository.findOne(id);
         kulttuuri.setKpl(count);
+        kulttuuri.setTime(new Date(System.currentTimeMillis()));
         return new ResponseEntity(kulttuuri, HttpStatus.OK);
     }
 
