@@ -39,8 +39,9 @@ $(document).ready(function () {
         buttons: {
             "Vaihda": function () {
                 $.post('kulttuuri/' + id, {count: $("#count").val()}, function (data) {
-                    console.log($("#kulttuuri" + id).html());
-                    console.log(data);
+                    $("#kulttuuri" + data.id + "count").text(data.kpl);
+                    $("#kulttuuri" + data.id + "time").text(new Date(data.time).time());
+                    $("table").tablesorter({sortList: [[2, 1]]});
                 });
                 dialog.dialog("close");
             },
@@ -52,4 +53,13 @@ $(document).ready(function () {
 });
 jQuery.expr[':'].contains = function(a, i, m) {
  return jQuery(a).text().toUpperCase().indexOf(m[3].toUpperCase()) >= 0;
+};
+Date.prototype.time = function() {
+  var yy = this.getFullYear().toString();
+  var mm = (this.getMonth()+1).toString();
+  var dd  = this.getDate().toString();
+  var h = this.getHours().toString();
+  var m = this.getMinutes().toString();
+  var s = this.getSeconds().toString();
+  return yy + "-" + (mm[1]?mm:"0"+mm[0]) + "-" + (dd[1]?dd:"0"+dd[0]) + " " + (h[1]?h:"0"+h[0]) + ":" + (m[1]?m:"0"+m[0]) + ":" + (s[1]?s:"0"+s[0]) + ".0";
 };
