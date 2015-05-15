@@ -14,15 +14,20 @@ function openChangeView(id2) {
 }
 function hide() {
     var a = $("#nimet").val().split("\n");
-    for (var i = 0; a.length; i++) {
+    var n = 0;
+    for (var i = 0; i < a.length; i++) {
         var name = a[i].split("\t")[0];
-        var b = $("td:contains('" + name + "')");
-        for (var j = 0; j < b.length; j++) {
-             if (b[j].textContent == name) {
-                 b[j].parentElement.hide();
-             }
+        if (name.length > 0) {
+            var b = $("td:contains('" + name + "')");
+            for (var j = 0; j < b.length; j++) {
+                if (b[j].textContent.toLowerCase() == name.toLowerCase()) {
+                    b[j].parentElement.remove();
+                    n++;
+                }
+            }
         }
     }
+    $("#info").text("Piilotettu " + n + " kulttuuri-ilmoitusta listasta.");
 }
 $(document).ready(function () {
     $("table").tablesorter({sortList: [[2, 1]]});
@@ -45,3 +50,6 @@ $(document).ready(function () {
         }
     });
 });
+jQuery.expr[':'].contains = function(a, i, m) {
+ return jQuery(a).text().toUpperCase().indexOf(m[3].toUpperCase()) >= 0;
+};

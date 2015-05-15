@@ -54,11 +54,14 @@
                 <input type="submit">
             </form>
             <h2>Piilota jo sovitut kulttuurit:</h2>
-            <textarea id='nimet'>Liitä tähän Museon 'Sopimuskumppani'-välilehdestä koko lista.</textarea>
+            <textarea id='nimet' placeholder='Liitä tähän museon "Sopimuskumppani"-välilehdestä koko lista poistaaksesi viereisestä listasta ne, joiden kanssa sinulla on jo sopimus. &#10&#10Voit lisäksi piilottaa museon "Museo"-välilehdessä olevat "Ano kulttuurivarannon jakosopimusta"-listassa olevat vastaavasti.' rows='7' cols='60' style='resize:none'></textarea><br />
+            <p id='info'></p>
             <button onclick='hide()'>Piilota.</button>
+            <button onclick='window.open("http://gosu.fi/i/abZ", "_blank")'>Katso malli</button>
             <h2>Uutta:</h2>
             <ul>
                 <li>Järjestetään automaattisesti ajan mukaan niin että tuorein ylimpänä.</li>
+                <li>Mahdollisuus rajata pois jo solmitut kulttuurit.</li>
             </ul>
             <h2>Hiukan vanhempia ominaisuuksia:</h2>
             <ul>
@@ -69,18 +72,17 @@
             <h2>Tulossa:</h2>
             <ul>
                 <li>Sivujen ulkoasua muokataan "paremmaksi".</li>
-                <li>Mahdollisuus rajata pois jo solmitut kulttuurit.</li>
             </ul>
-            <p>Päivitetty 14:00 15.05.2015</p>
+            <p>Päivitetty 18:00 15.05.2015</p>
             <div><h3>Yhteyttä saapi ottaa:</h3>
                 Pelissä wiliam <a target="_blank" href="http://s4-fi.ikariam.gameforge.com/?view=sendIKMessage&receiverId=20878"><img src="http://s4-fi.ikariam.gameforge.com/skin/interface/icon_message_write.png" /></a><br />
                 Foorumilla wiliam <a target="_blank" href="http://board.fi.ikariam.gameforge.com/index.php?form=PMNew&userID=6580"><img src="http://s4-fi.ikariam.gameforge.com/skin/interface/icon_message_write.png" /></a><br />
                 IRC: wili @Quakenet - wiliam @OGN<br />
                 Sähköposti: <a href="mailto:aikain@paivola.fi?Subject=Kulttuuri%20Palvelu" target="_top">aikain@paivola.fi</a>
             </div>
+            <footer>
+                Copyright © Aikain - gosu.fi 
+            </footer>
         </div>
-        <footer>
-            Copyright © Aikain - gosu.fi 
-        </footer>
     </body>
 </html>
