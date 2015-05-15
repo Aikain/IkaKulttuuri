@@ -13,7 +13,7 @@ function openChangeView(id2) {
     $("#dialog").dialog("open");
 }
 $(document).ready(function() { 
-    $("table").tablesorter(); 
+    $("table").tablesorter({sortList: [[2,1]]}); 
     var dialog = $("#dialog").dialog({
       autoOpen: false,
       height: 300,
