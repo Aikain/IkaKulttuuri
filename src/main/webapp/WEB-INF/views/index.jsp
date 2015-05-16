@@ -55,13 +55,15 @@
             <h2>Piilota jo sovitut kulttuurit:</h2>
             <textarea id='nimet' placeholder='Liitä tähän museon "Sopimuskumppani"-välilehdestä koko lista poistaaksesi viereisestä listasta ne, joiden kanssa sinulla on jo sopimus. &#10&#10Voit lisäksi piilottaa museon "Museo"-välilehdessä olevat "Ano kulttuurivarannon jakosopimusta"-listassa olevat vastaavasti.' rows='7' cols='60' style='resize:none'></textarea><br />
             <p id='info'></p>
-            <button onclick='hide()'>Piilota.</button>
+            <button onclick='hide()'>Piilota</button>
             <button onclick='window.open("http://gosu.fi/i/abZ", "_blank")'>Katso malli</button>
+            <button onclick='hideFull()'>Piilota täydet museot</button> 
             <h2>Uutta:</h2>
             <ul>
                 <li>Mahdollisuus rajata pois jo solmitut kulttuurit.</li>
                 <li>Viestikuvakkeen painaminen vähentää kulttuurimäärää yhdellä.</li>
                 <li>Viestikuvakkeen painaminen poistaa kyseisen ilmoituksen listastasi.</li>
+                <li>Mahdollisuus poistaa näkyvistä ne ilmoitukset, joissa määrä on 0.</li>
             </ul>
             <h2>Hiukan vanhempia ominaisuuksia:</h2>
             <ul>

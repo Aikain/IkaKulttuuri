@@ -32,6 +32,14 @@ function hide() {
     }
     $("#info").text("Piilotettu " + n + " kulttuuri-ilmoitusta listasta.");
 }
+function hideFull() {
+    var a = $('*[id*=count]:contains("0")');
+    for (var i = 0; i < a.length; i++) {
+        if (a[i].textContent === "0") {
+            a[i].parentElement.remove();
+        }
+    }
+}
 function change(id, count, rdy) {
     if (count < 0) return;
     if (rdy != false) rdy = true;
