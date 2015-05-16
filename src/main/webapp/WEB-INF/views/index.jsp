@@ -35,9 +35,8 @@
                             <td>${kulttuuri.user}</td>
                             <td id="kulttuuri${kulttuuri.id}count" onclick="openChangeView(${kulttuuri.id})">${kulttuuri.kpl}</td>
                             <td id="kulttuuri${kulttuuri.id}time">${kulttuuri.time}</td>
-                            <td><a target="_blank" href="http://s4-fi.ikariam.gameforge.com/?view=sendIKMessage&msgType=77&receiverId=${kulttuuri.userId}"><img src="http://s4-fi.ikariam.gameforge.com/skin/interface/icon_message_write.png" /></a></td>
-                            <td><a href="" onclick="poista(${kulttuuri.id});
-                            return false"><img src="http://s4-fi.ikariam.gameforge.com/skin/interface/cross.png" /></a></td>
+                            <td><a target="_blank" href="http://s4-fi.ikariam.gameforge.com/?view=sendIKMessage&msgType=77&receiverId=${kulttuuri.userId}" onclick="decrease(${kulttuuri.id}); hideOne(this)"><img src="http://s4-fi.ikariam.gameforge.com/skin/interface/icon_message_write.png" /></a></td>
+                            <td><a href="" onclick="poista(${kulttuuri.id});return false"><img src="http://s4-fi.ikariam.gameforge.com/skin/interface/cross.png" /></a></td>
                         </tr>
                     </c:forEach>
                 </tbody>
@@ -60,20 +59,22 @@
             <button onclick='window.open("http://gosu.fi/i/abZ", "_blank")'>Katso malli</button>
             <h2>Uutta:</h2>
             <ul>
-                <li>Järjestetään automaattisesti ajan mukaan niin että tuorein ylimpänä.</li>
                 <li>Mahdollisuus rajata pois jo solmitut kulttuurit.</li>
+                <li>Viestikuvakkeen painaminen vähentää kulttuurimäärää yhdellä.</li>
+                <li>Viestikuvakkeen painaminen poistaa kyseisen ilmoituksen listastasi.</li>
             </ul>
             <h2>Hiukan vanhempia ominaisuuksia:</h2>
             <ul>
                 <li>Klikkaamalla taulukon otsikoita, pystyt järjestämään kyseisen sarakkeen mukaan.</li>
                 <li>Uudelleen klikkaus vaihtaa suunnan (asc -> desc, desc -> asc).</li>  
                 <li>Klikkaamalla nimen vieressä olevaa kulttuurien määrää, voit vaihtaa sitä.</li>
+                <li>Järjestetään automaattisesti ajan mukaan niin että tuorein ylimpänä.</li>
             </ul>
             <h2>Tulossa:</h2>
             <ul>
                 <li>Sivujen ulkoasua muokataan "paremmaksi".</li>
             </ul>
-            <p>Päivitetty 18:00 15.05.2015</p>
+            <p>Päivitetty 14:00 16.05.2015</p>
             <div><h3>Yhteyttä saapi ottaa:</h3>
                 Pelissä wiliam <a target="_blank" href="http://s4-fi.ikariam.gameforge.com/?view=sendIKMessage&receiverId=20878"><img src="http://s4-fi.ikariam.gameforge.com/skin/interface/icon_message_write.png" /></a><br />
                 Foorumilla wiliam <a target="_blank" href="http://board.fi.ikariam.gameforge.com/index.php?form=PMNew&userID=6580"><img src="http://s4-fi.ikariam.gameforge.com/skin/interface/icon_message_write.png" /></a><br />

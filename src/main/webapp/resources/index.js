@@ -12,6 +12,9 @@ function openChangeView(id2) {
     id = id2;
     $("#dialog").dialog("open");
 }
+function hideOne(element) {
+    element.parentElement.parentElement.remove();
+}
 function hide() {
     var a = $("#nimet").val().split("\n");
     var n = 0;
@@ -29,6 +32,20 @@ function hide() {
     }
     $("#info").text("Piilotettu " + n + " kulttuuri-ilmoitusta listasta.");
 }
+function change(id, count, rdy) {
+    if (count < 0) return;
+    if (rdy != false) rdy = true;
+    $.post('kulttuuri/' + id, {'count': count}, function (data) {
+        if (rdy) {
+            $("#kulttuuri" + data.id + "count").text(data.kpl);
+            $("#kulttuuri" + data.id + "time").text(new Date(data.time).time());
+            $("table").tablesorter({sortList: [[2, 1]]});
+        }
+    });
+}
+function decrease(id) {
+    change(id, $("#kulttuuri" + id + "count").text()-1, false);
+}
 $(document).ready(function () {
     $("table").tablesorter({sortList: [[2, 1]]});
     var dialog = $("#dialog").dialog({
@@ -38,11 +55,7 @@ $(document).ready(function () {
         modal: true,
         buttons: {
             "Vaihda": function () {
-                $.post('kulttuuri/' + id, {count: $("#count").val()}, function (data) {
-                    $("#kulttuuri" + data.id + "count").text(data.kpl);
-                    $("#kulttuuri" + data.id + "time").text(new Date(data.time).time());
-                    $("table").tablesorter({sortList: [[2, 1]]});
-                });
+                change(id, $("#count").val());
                 dialog.dialog("close");
             },
             "Peruuta": function () {
