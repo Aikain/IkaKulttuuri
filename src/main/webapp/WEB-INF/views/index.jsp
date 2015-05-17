@@ -35,8 +35,8 @@
                             <td>${kulttuuri.user}</td>
                             <td id="kulttuuri${kulttuuri.id}count" onclick="openChangeView(${kulttuuri.id})">${kulttuuri.kpl}</td>
                             <td id="kulttuuri${kulttuuri.id}time">${kulttuuri.time}</td>
-                            <td><a target="_blank" href="http://s4-fi.ikariam.gameforge.com/?view=sendIKMessage&msgType=77&receiverId=${kulttuuri.userId}" onclick="decrease(${kulttuuri.id}); hideOne(this)"><img src="http://s4-fi.ikariam.gameforge.com/skin/interface/icon_message_write.png" /></a></td>
-                            <td><a href="" onclick="poista(${kulttuuri.id});return false"><img src="http://s4-fi.ikariam.gameforge.com/skin/interface/cross.png" /></a></td>
+                            <td><a target="_blank" href="http://s4-fi.ikariam.gameforge.com/?view=sendIKMessage&msgType=77&receiverId=${kulttuuri.userId}" onclick="decrease(${kulttuuri.id}); hideOne(this)"><img src="<c:url value='/resources/img/viesti.png' />" /></a></td>
+                            <td><a href="" onclick="poista(${kulttuuri.id});return false"><img src="<c:url value='/resources/img/poista.png' />" /></a></td>
                         </tr>
                     </c:forEach>
                 </tbody>

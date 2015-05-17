@@ -50,11 +50,19 @@ public class DefaultController {
     }
 
     @Transactional
-    @RequestMapping(value = "kulttuuri/{id}", method = RequestMethod.POST)
+    @RequestMapping(value = "kulttuuri/{id}/change", method = RequestMethod.POST)
     public ResponseEntity change(@PathVariable Long id, @RequestParam int count) {
         Kulttuuri kulttuuri = kulttuuriRepository.findOne(id);
         kulttuuri.setKpl(count);
         kulttuuri.setTime(new Date(System.currentTimeMillis()));
+        return new ResponseEntity(kulttuuri, HttpStatus.OK);
+    }
+
+    @Transactional
+    @RequestMapping(value = "kulttuuri/{id}/changenotime", method = RequestMethod.POST)
+    public ResponseEntity changeNoTime(@PathVariable Long id, @RequestParam int count) {
+        Kulttuuri kulttuuri = kulttuuriRepository.findOne(id);
+        kulttuuri.setKpl(count);
         return new ResponseEntity(kulttuuri, HttpStatus.OK);
     }
 

@@ -40,10 +40,10 @@ function hideFull() {
         }
     }
 }
-function change(id, count, rdy) {
+function change(id, count, address, rdy) {
     if (count < 0) return;
     if (rdy != false) rdy = true;
-    $.post('kulttuuri/' + id, {'count': count}, function (data) {
+    $.post('kulttuuri/' + id + '/' + address, {'count': count}, function (data) {
         if (rdy) {
             $("#kulttuuri" + data.id + "count").text(data.kpl);
             $("#kulttuuri" + data.id + "time").text(new Date(data.time).time());
@@ -52,7 +52,7 @@ function change(id, count, rdy) {
     });
 }
 function decrease(id) {
-    change(id, $("#kulttuuri" + id + "count").text()-1, false);
+    change(id, $("#kulttuuri" + id + "count").text()-1, 'changenotime', false);
 }
 $(document).ready(function () {
     $("table").tablesorter({sortList: [[2, 1]]});
@@ -63,7 +63,7 @@ $(document).ready(function () {
         modal: true,
         buttons: {
             "Vaihda": function () {
-                change(id, $("#count").val());
+                change(id, $("#count").val(), 'change');
                 dialog.dialog("close");
             },
             "Peruuta": function () {
