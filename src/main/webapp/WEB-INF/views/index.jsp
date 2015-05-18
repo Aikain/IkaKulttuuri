@@ -53,17 +53,16 @@
                 <input type="submit">
             </form>
             <h2>Piilota jo sovitut kulttuurit:</h2>
-            <textarea id='nimet' placeholder='Liitä tähän museon "Sopimuskumppani"-välilehdestä koko lista poistaaksesi viereisestä listasta ne, joiden kanssa sinulla on jo sopimus. &#10&#10Voit lisäksi piilottaa museon "Museo"-välilehdessä olevat "Ano kulttuurivarannon jakosopimusta"-listassa olevat vastaavasti.' rows='7' cols='60' style='resize:none'></textarea><br />
+            <textarea id='nimet' placeholder='Liitä tähän museon "Sopimuskumppani"-välilehdestä koko lista poistaaksesi viereisestä listasta ne, joiden kanssa sinulla on jo sopimus. &#10&#10Voit lisäksi piilottaa museon "Museo"-välilehdessä olevat "Ano kulttuurivarannon jakosopimusta"-listassa olevat vastaavasti.&#10&#10Voit myös piilottaa kirjoittamalle yhden nimen yhdelle riville.' rows='8' cols='70' style='resize:none'></textarea><br />
             <p id='info'></p>
             <button onclick='hide()'>Piilota</button>
             <button onclick='window.open("http://gosu.fi/i/abZ", "_blank")'>Katso malli</button>
+            <button onclick='window.open("http://gosu.fi/i/ab1", "_blank")'>Katso malli2</button>
             <button onclick='hideFull()'>Piilota täydet museot</button> 
             <h2>Uutta:</h2>
             <ul>
-                <li>Mahdollisuus rajata pois jo solmitut kulttuurit.</li>
-                <li>Viestikuvakkeen painaminen vähentää kulttuurimäärää yhdellä.</li>
-                <li>Viestikuvakkeen painaminen poistaa kyseisen ilmoituksen listastasi.</li>
-                <li>Mahdollisuus poistaa näkyvistä ne ilmoitukset, joissa määrä on 0.</li>
+                <li>Tarkennettu piilotus ominaisuuden ohjetekstiä.</li>
+                <li>Lisätty toinen mallikuva.</li>
             </ul>
             <h2>Hiukan vanhempia ominaisuuksia:</h2>
             <ul>
@@ -71,6 +70,10 @@
                 <li>Uudelleen klikkaus vaihtaa suunnan (asc -> desc, desc -> asc).</li>  
                 <li>Klikkaamalla nimen vieressä olevaa kulttuurien määrää, voit vaihtaa sitä.</li>
                 <li>Järjestetään automaattisesti ajan mukaan niin että tuorein ylimpänä.</li>
+                <li>Mahdollisuus rajata pois jo solmitut kulttuurit.</li>
+                <li>Viestikuvakkeen painaminen vähentää kulttuurimäärää yhdellä.</li>
+                <li>Viestikuvakkeen painaminen poistaa kyseisen ilmoituksen listastasi.</li>
+                <li>Mahdollisuus poistaa näkyvistä ne ilmoitukset, joissa määrä on 0.</li>
             </ul>
             <h2>Tulossa:</h2>
             <ul>
