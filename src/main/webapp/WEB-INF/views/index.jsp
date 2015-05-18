@@ -79,7 +79,7 @@
             <ul>
                 <li>Sivujen ulkoasua muokataan "paremmaksi".</li>
             </ul>
-            <p>Päivitetty 14:00 16.05.2015</p>
+            <p>Päivitetty 19:00 18.05.2015</p>
             <div><h3>Yhteyttä saapi ottaa:</h3>
                 Pelissä wiliam <a target="_blank" href="http://s4-fi.ikariam.gameforge.com/?view=sendIKMessage&receiverId=20878"><img src="http://s4-fi.ikariam.gameforge.com/skin/interface/icon_message_write.png" /></a><br />
                 Foorumilla wiliam <a target="_blank" href="http://board.fi.ikariam.gameforge.com/index.php?form=PMNew&userID=6580"><img src="http://s4-fi.ikariam.gameforge.com/skin/interface/icon_message_write.png" /></a><br />
