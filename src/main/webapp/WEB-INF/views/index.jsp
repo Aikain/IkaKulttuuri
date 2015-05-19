@@ -81,8 +81,8 @@
             </ul>
             <p>Päivitetty 19:00 18.05.2015</p>
             <div><h3>Yhteyttä saapi ottaa:</h3>
-                Pelissä wiliam <a target="_blank" href="http://s4-fi.ikariam.gameforge.com/?view=sendIKMessage&receiverId=20878"><img src="http://s4-fi.ikariam.gameforge.com/skin/interface/icon_message_write.png" /></a><br />
-                Foorumilla wiliam <a target="_blank" href="http://board.fi.ikariam.gameforge.com/index.php?form=PMNew&userID=6580"><img src="http://s4-fi.ikariam.gameforge.com/skin/interface/icon_message_write.png" /></a><br />
+                Pelissä wiliam <a target="_blank" href="http://s4-fi.ikariam.gameforge.com/?view=sendIKMessage&receiverId=20878"><img src="<c:url value='/resources/img/viesti.png' />" /></a><br />
+                Foorumilla wiliam <a target="_blank" href="http://board.fi.ikariam.gameforge.com/index.php?form=PMNew&userID=6580"><img src="<c:url value='/resources/img/viesti.png' />" /></a><br />
                 IRC: wili @Quakenet - wiliam @OGN<br />
                 Sähköposti: <a href="mailto:aikain@paivola.fi?Subject=Kulttuuri%20Palvelu" target="_top">aikain@paivola.fi</a>
             </div>
