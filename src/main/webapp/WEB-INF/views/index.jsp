@@ -59,12 +59,10 @@
             <button onclick='window.open("http://gosu.fi/i/abZ", "_blank")'>Katso malli</button>
             <button onclick='window.open("http://gosu.fi/i/ab1", "_blank")'>Katso malli2</button>
             <button onclick='hideFull()'>Piilota täydet museot</button> 
-            <h2>Uutta:</h2>
+<!--            <h2>Uutta:</h2>
             <ul>
-                <li>Tarkennettu piilotus ominaisuuden ohjetekstiä.</li>
-                <li>Lisätty toinen mallikuva.</li>
             </ul>
-            <h2>Hiukan vanhempia ominaisuuksia:</h2>
+-->            <h2>Hiukan vanhempia ominaisuuksia:</h2>
             <ul>
                 <li>Klikkaamalla taulukon otsikoita, pystyt järjestämään kyseisen sarakkeen mukaan.</li>
                 <li>Uudelleen klikkaus vaihtaa suunnan (asc -> desc, desc -> asc).</li>  
@@ -74,12 +72,14 @@
                 <li>Viestikuvakkeen painaminen vähentää kulttuurimäärää yhdellä.</li>
                 <li>Viestikuvakkeen painaminen poistaa kyseisen ilmoituksen listastasi.</li>
                 <li>Mahdollisuus poistaa näkyvistä ne ilmoitukset, joissa määrä on 0.</li>
+                <li>Tarkennettu piilotus ominaisuuden ohjetekstiä.</li>
+                <li>Lisätty toinen mallikuva.</li>
             </ul>
             <h2>Tulossa:</h2>
             <ul>
                 <li>Sivujen ulkoasua muokataan "paremmaksi".</li>
             </ul>
-            <p>Päivitetty 19:00 18.05.2015</p>
+            <p>Päivitetty 19:00 26.05.2015</p>
             <div><h3>Yhteyttä saapi ottaa:</h3>
                 Pelissä wiliam <a target="_blank" href="http://s4-fi.ikariam.gameforge.com/?view=sendIKMessage&receiverId=20878"><img src="<c:url value='/resources/img/viesti.png' />" /></a><br />
                 Foorumilla wiliam <a target="_blank" href="http://board.fi.ikariam.gameforge.com/index.php?form=PMNew&userID=6580"><img src="<c:url value='/resources/img/viesti.png' />" /></a><br />
