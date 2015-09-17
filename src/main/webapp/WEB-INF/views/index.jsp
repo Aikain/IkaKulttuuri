@@ -33,7 +33,7 @@
                     <c:forEach var="kulttuuri" items="${kulttuurit}">
                         <tr id="kulttuuri${kulttuuri.id}">
                             <td>${kulttuuri.user}</td>
-                            <td id="kulttuuri${kulttuuri.id}count" onclick="openChangeView(${kulttuuri.id})">${kulttuuri.kpl}</td>
+                            <td id="kulttuuri${kulttuuri.id}count" class="kulttuuricount" onclick="openChangeView(${kulttuuri.id})">${kulttuuri.kpl}</td>
                             <td id="kulttuuri${kulttuuri.id}time">${kulttuuri.time}</td>
                             <td><a target="_blank" href="http://s4-fi.ikariam.gameforge.com/?view=sendIKMessage&msgType=77&receiverId=${kulttuuri.userId}" onclick="decrease(${kulttuuri.id}); hideOne(this)"><img src="<c:url value='/resources/img/viesti.png' />" /></a></td>
                             <td><a href="" onclick="poista(${kulttuuri.id});return false"><img src="<c:url value='/resources/img/poista.png' />" /></a></td>
@@ -59,10 +59,11 @@
             <button onclick='window.open("http://gosu.fi/i/abZ", "_blank")'>Katso malli</button>
             <button onclick='window.open("http://gosu.fi/i/ab1", "_blank")'>Katso malli2</button>
             <button onclick='hideFull()'>Piilota täydet museot</button> 
-<!--            <h2>Uutta:</h2>
+            <h2>Uutta:</h2>
             <ul>
+                <li>Vaihdetaan normaali kursori pointeriksi, kun kursori viedään kulttuurimäärän päälle.</li>
             </ul>
--->            <h2>Hiukan vanhempia ominaisuuksia:</h2>
+            <h2>Hiukan vanhempia ominaisuuksia:</h2>
             <ul>
                 <li>Klikkaamalla taulukon otsikoita, pystyt järjestämään kyseisen sarakkeen mukaan.</li>
                 <li>Uudelleen klikkaus vaihtaa suunnan (asc -> desc, desc -> asc).</li>  
@@ -79,7 +80,7 @@
             <ul>
                 <li>Sivujen ulkoasua muokataan "paremmaksi".</li>
             </ul>
-            <p>Päivitetty 19:00 26.05.2015</p>
+            <p>Päivitetty 11:00 06.06.2015</p>
             <div><h3>Yhteyttä saapi ottaa:</h3>
                 Pelissä wiliam <a target="_blank" href="http://s4-fi.ikariam.gameforge.com/?view=sendIKMessage&receiverId=20878"><img src="<c:url value='/resources/img/viesti.png' />" /></a><br />
                 Foorumilla wiliam <a target="_blank" href="http://board.fi.ikariam.gameforge.com/index.php?form=PMNew&userID=6580"><img src="<c:url value='/resources/img/viesti.png' />" /></a><br />

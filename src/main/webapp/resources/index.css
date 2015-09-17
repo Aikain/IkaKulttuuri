@@ -26,3 +26,6 @@ footer {
     text-align:center;
     height: 5%;
 }
+.kulttuuricount {
+    cursor: pointer;
+}
