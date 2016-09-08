@@ -29,3 +29,27 @@ footer {
 .kulttuuricount {
     cursor: pointer;
 }
+#warn-text {
+  background: antiquewhite;
+  width: 600px;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  margin-left: -320px;
+  height: 370px;
+  padding: 20px;
+  border: brown 1px;
+  font-size: xx-large;
+  border: 3px solid brown;
+  text-align: center;
+  z-index: 100;
+}
+#warn-back {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background: aliceblue;
+}

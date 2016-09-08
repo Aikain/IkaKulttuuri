@@ -1,4 +1,12 @@
+if (location.href.indexOf("#") == -1) location.href = "#simple";
 var id;
+function lisaa() {
+    $.ajax({
+        url: '',
+        type: 'POST',
+        data: $("form[method=POST]").serializeArray(),
+    });
+}
 function poista(id) {
     $.ajax({
         url: 'kulttuuri/' + id,
@@ -55,6 +63,38 @@ function decrease(id) {
     change(id, $("#kulttuuri" + id + "count").text()-1, 'changenotime', false);
 }
 $(document).ready(function () {
+    if (location.href.split("#simple").length == 2 || location.href.split("#very_simple").length == 2) {
+      $(".vasen").append($(".oikea form"));
+      $(".oikea").remove();
+      $(".header").remove();
+      $("body").css("text-align", "center");
+      $(".vasen").css("display", "inline-block").css("float", "none").css("width", "initial");
+    }
+    if (location.href.split("#very_simple").length == 2) {
+      $("a[onclick^='poista']").remove();
+      $('.kulttuuricount').prop('onclick',null).off('click');
+      $('.kulttuuricount').css("cursor", "auto");
+      $("img").attr("src", "https://s4-fi.ikariam.gameforge.com/skin/interface/icon_message_write.png");
+      $("td[id$='time']").remove();
+      $("thead").remove();
+      $("form").remove();
+      $("body").css("text-align", "");
+      $("body").css("width", "160px");
+      $("body").append("<div style='margin:-10px;float:right'><a href='https://ika.gosu.fi/'><img src='https://gosu.fi/favicon.ico' /></a></div>")
+    }
+    if (document.referrer.indexOf("http://adf.ly/") == 0) {
+       $("#warn").show();
+       var a = setInterval(function() {
+         $("#warn button").text($("#warn button").text().replace(".", "") - 1 + "..");
+         if ($("#warn button").text() == "0..") { 
+           $("#warn button").text("OK!");
+           $("#warn button").on("click", function() {
+             $("#warn").hide();
+           })
+           clearInterval(a);
+         }
+       }, 1000);
+    }
     $("table").tablesorter({sortList: [[2, 1]]});
     var dialog = $("#dialog").dialog({
         autoOpen: false,

@@ -1,0 +1,19 @@
+version: "2"
+services:
+  ika:
+    build: ika
+    restart: always
+    depends_on:
+      - mysql
+    ports:
+      - "0.0.0.0:5002:80"
+  mysql:
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=ik4
+      - MYSQL_DATABASE=ika
+    volumes:
+      - persistent_db:/var/lib/mysql
+volumes:
+  persistent_db:
+   driver: local
