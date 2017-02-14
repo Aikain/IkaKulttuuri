@@ -6,14 +6,12 @@ services:
     depends_on:
       - mysql
     ports:
-      - "0.0.0.0:5002:80"
+      - "0.0.0.0:5558:80"
   mysql:
     image: mysql:latest
+    restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=ik4
       - MYSQL_DATABASE=ika
     volumes:
-      - persistent_db:/var/lib/mysql
-volumes:
-  persistent_db:
-   driver: local
+      - /srv/data/ikakulttuuri/mysql:/var/lib/mysql
