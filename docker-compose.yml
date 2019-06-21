@@ -11,7 +11,7 @@ services:
     image: mysql:latest
     restart: always
     environment:
-      - MYSQL_ROOT_PASSWORD=ik4
+      - MYSQL_ROOT_PASSWORD=xeediepashaixoh8gooch0yoogieDahjain2eeque8chie6Oeyohthei7iwauwai8ohsh
       - MYSQL_DATABASE=ika
     volumes:
-      - /srv/data/ikakulttuuri/mysql:/var/lib/mysql
+      - /srv/data/aikain/ikariam/cultures.s4-fi.ikariam.aika.in/mysql:/var/lib/mysql
